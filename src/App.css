@@ -1,33 +1,80 @@
+html, body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #3c788c;
+}
+
 .App {
+  font-family: 微軟正黑體;
+}
+
+.App-banner {
+  height: 300px;
+  background-image: url(https://images.unsplash.com/photo-1505314392404-ddf214ad93f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
+  background-size: cover;
+  padding: 20px 0 0 20px;
+  text-shadow: 0 0 10px black;
+  color: white;
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+ 
+.App-wrapper {
+  width: 800px;
+  margin: 50px auto 130px auto;
+  min-height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App-itemTitle {
+  font-size: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+.App-section {
+  border-left: 3px solid #82cff2;
+  padding: 5px 10px;
+  margin-bottom: 30px;
+  line-height: 1.5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App-section:last-child {
+  margin-bottom: 0; 
+}
+
+.App-deco {
+  background-color: #82cff2;
+  height: 20px;
+}
+
+.App-curve {
+  height: 100px;
+  background-color: #82cff2;
+  position: relative;
+}
+
+.App-curve::before {
+  position: absolute;
+  content: '';
+  background-color: #82cff2;
+  display: block;
+  width: 120%;
+  transform: translateX(-10%);
+  height: 200px;
+  top: -95px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 480px) {
+  .App-wrapper {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  h2 {
+    text-align: center;
+  }
+
+  .App-title {
+    text-align: center;
   }
 }
